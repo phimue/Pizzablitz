@@ -1,0 +1,362 @@
+html {
+    cursor: url('images/cursor.cur') 12 0, auto;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar:hover {
+    cursor: url('images/cursor.cur'), auto;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0, 0.25);
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: darkgrey;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: lightgrey;
+
+}
+
+body {
+    font-family: 'Arial Rounded MT','Arial', sans-serif;
+}
+
+/*Kopfbereich*/
+.head {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    background-image: url("images/istockphoto-843610508-612x612.jpg");
+    background-position: center;
+    border-bottom: 2px solid black;
+}
+
+.head img {
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    height: 13vh;
+    width: 13vh;
+    border: 2px solid black;
+}
+
+.head h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 12vmin;
+}
+
+.titel {
+    margin-right: 10px;
+    justify-self: start;
+    align-self: center;
+}
+
+h1 {
+    font-size: 1vw;
+    color: red;
+    background-color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 8px;
+    border: 2px solid black;
+    text-shadow: 10px 5px 10px black;
+}
+/*Ende Kopfbereich*/
+
+
+/*Hauptteil von index.html*/
+.bestellliste {
+    margin-top: 1vh;
+    margin-right: 2vw;
+    grid-area: sidebar;
+    background: lightblue;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-top: solid 2px black;
+    overflow: auto;
+}
+
+.bestellliste > h2 {
+    margin-left: 30vw;
+    margin-right: 5vw;
+    text-align: center;
+}
+
+.bestellliste > div {
+    margin-left: 30vw;
+    margin-bottom: 6px;
+    margin-right: 5vw;
+    text-align: center;
+}
+
+.bestellliste div > .inputfield{
+    text-align: center;
+    width: 16px;
+}
+
+.bestellliste div > .removebutton{
+    margin-left: 6px;
+}
+
+.bestellliste button:hover{
+    cursor: url('images/cursor.cur') 12 0, auto;
+}
+
+.body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 70% 20%;
+    height: 75vh;
+    top: 15vh;
+    position: fixed;
+    grid-template-areas: 
+        "headline" 
+        "content" 
+        "sidebar"
+        ;
+}
+
+.container {
+    grid-area: content;
+    width: 98vw;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr;
+    background-color: black;
+    grid-row-gap: 3px;
+    overflow: auto;
+    border-top: solid 2px black;
+}
+
+.container > div {
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: white;
+}
+
+.container > div > div {
+    justify-self: center;
+    align-self: center;
+    padding-top: 4px;
+}
+
+
+
+.pizzakarte {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: headline;
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.headerline{
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+button {
+    background-color: darkgrey;
+    border: solid 2px black;
+    padding: 5px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.container button{
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 10vw;
+}
+
+
+button:hover {
+    color: white;
+    border-color: navy;
+    background-color: steelblue;
+    cursor: url('images/PizzaClick.cur'), auto;
+}
+
+a:hover {
+    cursor: url('images/cursor.cur'), auto;
+}
+
+.container img {
+    width: 20vmax;
+    height: 13vmax;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.totalprice{
+    position: fixed;
+    bottom: 15vh;
+    margin-left: 5px;
+}
+
+.order {
+    position: fixed;
+    bottom: 11.5vh;
+    margin-left: 60px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    font-weight: bold;
+    display: table-cell; 
+    vertical-align: middle;
+}
+
+.clear{
+    position: fixed;
+    bottom: 11.5vh;
+    margin-left: 5px;
+    font-family: 'Arial Rounded MT', sans-serif;
+    font-weight: bold;
+    display: table-cell; 
+    vertical-align: middle;
+}
+
+
+/*Ende Hauptteil von index.html*/
+
+/*Fußbereich*/
+.bottom {
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom > div {
+    display: inline;
+    font-size: 2em;
+}
+
+.bottom a {
+    text-decoration: none;
+    color: white;
+    float: left;
+    padding: 20px;
+}
+
+.bottom a:hover{
+    color: darkgrey;
+}
+/*Ende von Fußbereich*/
+
+
+/*Body-Style von Kontakt und Impressum*/
+.nogridcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    overflow: auto;
+}
+
+/*Kontaktformular in kontakt.html*/
+#e_mail{
+    width:50%;
+    border: 2px solid black;
+    border-radius: 2em;
+    margin-bottom: 10px;
+    padding-left: 6px;
+}
+
+
+#nachricht{
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    border: solid 2px black;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+/*Ende Kontaktformular*/
+
+
+@media screen and (min-width: 900px) {
+
+    .body {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 10% 90%;
+        height: 75vh;
+        top: 15vh;
+        position: fixed;
+        grid-template-areas: 
+            "headline sidebar" 
+            "content sidebar";
+    }
+
+    .container {
+        grid-area: content;
+        width: 80vw;
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: 1fr;
+        background-color: black;
+        grid-row-gap: 3px;
+        overflow-y: scroll;
+        border-top: solid 2px black;
+    }
+
+    .bestellliste {
+        margin-top: 0;
+        margin-right: 0.1vw;
+        grid-area: sidebar;
+        background: lightblue;
+        border-left: solid 2px black;
+        overflow: auto;
+    }
+
+    .bestellliste > div {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .bestellliste > h2 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

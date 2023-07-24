@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pizzablitz</title>
+        <link id="favicon" rel="shortcut icon" href="images/PizzaLogo.jpg" />"
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="warenkorb.js"></script>
+    </head>
+
+    <body onload="printCart()">
+         
+
+
+
+        <div class="head">
+            <div class="logo"><a href="index.html"><img src="images/PizzaLogo.jpg" alt="Pizzablitz"></a></div>
+            <div class="titel"><h1>Pizzablitz</h1></div>
+        </div>
+
+        <div class="body">
+            <div class="pizzakarte">
+                <div class="headerline">Pizzakarte</div>
+                <div class="headername">Name</div>
+                <div id="size_klein">Klein</div>
+                <div id="size_gross">Groß</div>
+            </div>
+
+            <div class="bestellliste">
+                <h2>Bestellung</h2>
+                <p class="totalprice">Gesamt: <span id="price">0.00 €</span></p>
+                <button type="submit" form="orderform" class="order" onclick="checkout()">Order</button>
+                <button class="clear" onclick="clearCart(), alert('Bestellung gelöscht!')">Clear</button>
+            </div>
+
+            <div class="container">
+                <div class="pizza1">
+                    <div class="bild1"><img src="images/Margherita.jpg" alt="Pizzabild"></div>
+                    <div class="name" id="pizza1">Margherita</div>                   
+                    <div><button class="buttonsmall" id="button1" onclick="addItem('pizza1', 'button1');">5.00 €</button></div>
+                    <div><button class="buttonbig" id="button2" onclick="addItem('pizza1', 'button2');">7.50 €</button></div>
+                </div>
+                <div class="pizza2">
+                    <div class="bild2"><img src="images/prosciutto.jpg" alt="Pizzabild"></div>
+                    <div class="name" id="pizza2">Schinken</div>
+                    <div><button class="buttonsmall" id="button3" onclick="addItem('pizza2','button3');">6.20 €</button></div>
+                    <div><button class="buttonbig" id="button4" onclick="addItem('pizza2', 'button4');">8.00 €</button></div>
+                </div>
+
+                <div class="pizza3">
+                    <div class="bild3"><img src="images/salami.jpg" alt="Pizzabild"></div>
+                    <div class="name" id="pizza3">Salami</div>
+                    <div><button class="buttonsmall" id="button5" onclick="addItem('pizza3', 'button5');">6.50 €</button></div>
+                    <div><button class="buttonbig" id="button6" onclick="addItem('pizza3', 'button6');">8.50 €</button></div>                 
+                </div>
+
+                <div class="pizza4">
+                    <div class="bild4"><img src="images/funghi.jpg" alt="Pizzabild"></div>
+                    <div class="name" id="pizza4">Champignon</div>
+                    <div><button class="buttonsmall" id="button7" onclick="addItem('pizza4','button7');">7.00 €</button></div>
+                    <div><button class="buttonbig" id="button8" onclick="addItem('pizza4','button8');">9.00 €</button></div> 
+                </div>
+                <div class="pizza5">
+                    <div class="bild5"><img src="images/pizza-prosciutto-e-fungi.jpg" alt="Pizzabild"></div>
+                    <div class="name" id="pizza5">Schinken Champignon</div>
+                    <div><button class="buttonsmall" id="button9" onclick="addItem('pizza5','button9');">8.00 €</button></div>
+                    <div><button class="buttonbig" id="button10" onclick="addItem('pizza5','button10');">9.50 €</button></div>
+                </div>
+                <div class="pizza6">
+                    <div class="bild6"><img src="images/tonno.jpg" alt="Pizzabild"></div>
+                    <div class="name" id="pizza6">Thunfisch</div>                   
+                    <div><button class="buttonsmall" id="button11" onclick="addItem('pizza6','button11');">6.50 €</button></div>
+                    <div><button class="buttonbig" id="button12" onclick="addItem('pizza6','button12');">7.50 €</button></div>
+                </div>
+            </div>
+        </div>            
+
+        <div class="bottom">
+            <div class="impressum">
+                <a href="impressum.html">Impressum</a>
+            </div>
+            <div class="kontakt">
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+        </div>
+
+    </body>
+</html>

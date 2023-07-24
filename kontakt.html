@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="warenkorb.js"></script>
+    </head>
+
+    <body>
+
+        <div class="head">
+            <div class="logo"><a href="index.html"><img src="images/PizzaLogo.jpg" alt="Pizzablitz"></a></div>
+            <div class="titel"><h1>Pizzablitz</h1></div>
+        </div>
+
+        <div class="nogridcontainer">
+            <div class="Kontakt">
+            <div class="mailSchreiben">
+                <form action="kontakt.html" id="kontakt">
+                    <input type="text" id="e_mail" name="email" placeholder="Eigene E-Mail Adresse" value="" required />
+                    <textarea id="nachricht" name="text" cols="20" rows="20" form="kontakt" placeholder="Bitte hier schreiben..."></textarea>
+                    <input type="submit" value="Send" onclick="sendMail(); return false;" /><br /><br />
+                </form>
+            </div>
+                Pizzeria Pizzablitz<br /><br />
+                Musterweg<br />
+                12345 Musterstadt<br /><br />
+
+                Öffnungszeiten:<br /><br />
+                Mo: 8:30-22:00<br />
+                Di: 8:30-22:00<br />
+                Mi: Geschlossen<br />
+                Do: 8:00-11:00 & 16:00-22:00<br />
+                Fr: 11:00-24:00<br />
+                Sa: 11:00-24:00<br />
+                So: 11:00-22:00<br /><br />
+
+                Telefon: <a href="tel:+491234789456">01234-789456</a><br />
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="impressum">
+                <a href="impressum.html">Impressum</a>
+            </div>
+            <div class="kontakt">
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+        </div>
+    </body>
+
+</html>
